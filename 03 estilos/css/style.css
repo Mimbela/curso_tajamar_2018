@@ -1,2 +1,21 @@
-#p1 {color: aqua}
+/*CRITERIO DE ESPECIFICIDAD:
+a- in line, los valores en línea
+b-id 
+c-class
+d-etiquetas
 
+a.b.c.d.
+
+*/
+
+/*selector mediante id : no se usa, #p1, especificidad 0.1.0.0*/
+#p1 {color: black}
+
+/*selector mediante class, LOS MAS IMPORTANTES, especificidad 0.0.1.0*/
+.p1 {color: aqua}
+.p2 {color: blueviolet}
+
+
+
+/*selector genérico, especificidad 0.0.0.1*/
+p {color: blue}
