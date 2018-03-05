@@ -1,0 +1,41 @@
+header p{
+    color: maroon;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+footer p{
+    color: navy;
+
+
+}
+
+footer:hover p.derechos{
+    font-size: 6rem;
+}
+
+aside a:link{
+    color: indigo
+}
+
+aside a:visited{
+    color: gold
+
+}
+
+article .p2+p:first-line{
+    font-weight:bold;
+
+}
+
+section::before {
+    content: "Empieza lo bueno";
+    color: salmon;
+
+}
+
+section::after {
+
+    content: "termina lo bueno";
+    color: salmon;
+}

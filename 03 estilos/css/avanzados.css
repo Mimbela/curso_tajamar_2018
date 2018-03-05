@@ -1,0 +1,32 @@
+footer>p
+{
+    color: crimson;
+}
+
+article .p2+p{
+
+color: mediumseagreen
+
+}
+
+[name]{color: mediumpurple}/*todos los elementos con el atributo name se deben poner color violeta*/
+
+.p1 {color: limegreen}
+
+
+section::before {
+    content: "Empieza lo bueno";
+    color: salmon;
+
+}
+
+section::after {
+
+    content: "termina lo bueno";
+    color: salmon;
+}
+
+section p::before{
+    counter-increment:section;
+    content: counter(section) "." url(../);
+}
