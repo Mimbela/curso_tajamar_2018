@@ -1,6 +1,8 @@
+/*@import "extras.css";    se usa cuando en html ponemos solo un link a style y queremos que desde style aplique los cambio de extras  */
+
 /*CRITERIO DE ESPECIFICIDAD:
-a- in line, los valores en línea
-b-id 
+a- in line, los valores en línea (nunca usar)
+b-id (nunca usar)
 c-class
 d-etiquetas
 

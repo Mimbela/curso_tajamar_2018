@@ -1,0 +1,18 @@
+body {
+    color: chocolate; /*propiedad que se hereda*/
+    border: 1px solid  blueviolet; /*tiene propiedad que no se hereda*/
+    margin: 50px;
+}
+
+h1 {
+    color: brown;
+    font-size: 4rem;
+
+
+
+}
+
+p{
+    color: aqua;
+
+}
