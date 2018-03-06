@@ -9,7 +9,7 @@ color: mediumseagreen
 
 }
 
-[name]{color: mediumpurple}/*todos los elementos con el atributo name se deben poner color violeta*/
+[name="serpiente"]{color: mediumpurple}/*todos los elementos con el atributo name se deben poner color violeta*/
 
 .p1 {color: limegreen}
 

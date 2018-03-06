@@ -4,14 +4,29 @@ header p{
     font-weight: bold;
 }
 
-footer p{
+/* footer p{
     color: navy;
 
 
+} */
+
+article .p2+p:hover { /*aplica el tamaño solo al p*/
+   /*  color: blue */
+   font-size: 4rem;
 }
 
-footer:hover p.derechos{
-    font-size: 6rem;
+article .p2+p:first-letter {
+    font-size: 3rem;
+    font-family: fantasy;
+}
+
+article .p2+p:first-line {
+    font-weight: bold;
+}
+
+footer:hover /* p.derechos */{
+    font-size: 2rem;
+    color: chartreuse;
 }
 
 aside a:link{
