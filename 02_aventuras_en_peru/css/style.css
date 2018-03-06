@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+
+body{
+    font-family: 'Raleway', sans-serif;
+
+}
+
+
+
 header p{
     color: maroon;
     font-size: 1.5rem;
