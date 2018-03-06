@@ -1,0 +1,51 @@
+
+
+
+
+
+
+
+article  p:nth-child(2){ /*los segundos hijos se ponen en marrón*/
+
+color: brown;
+
+}
+ 
+/* p :nth-of-type(2){
+
+    color: brown;
+} */
+
+p :first-child{
+
+color: chartreuse;
+
+}
+
+* { /*esto es un selector*/
+    color: darkblue;
+    border: 1px, solid; /*el border no se hereda*/
+}
+
+
+*:not(h2){ /*todo menos el h2 se pone amarillo o naranja*/
+    color: darkorange;
+}
+
+p :not(:first-child){
+    border: 1px, 2solid;
+
+}
+
+
+/*Vamos a crear variables*/
+/*lo podemos comprobar en la web caniuse.com*/
+:root{
+    --base:salmon;
+    --color-texto: brown;
+
+}
+
+/*CAJAS*/
+
+/*CONTENIDO/PADDING/BORDER/MARGIN*/
