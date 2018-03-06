@@ -43,14 +43,16 @@ article .p2+p:first-line{
 
 }
 
-section::before {
+section::before { /*pseudoelemento*/
     content: "Empieza lo bueno";
     color: salmon;
 
 }
 
-section::after {
+section::after {  /*pseudoelemento*/
 
     content: "termina lo bueno";
     color: salmon;
 }
+
+
