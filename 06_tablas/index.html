@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tablas</title>
+</head>
+<style>
+    table.t1{
+        empty-cells: hide;/* esconde la celda que está vacía */
+       /* border-collapse: separate;/* si se pone el colapse  hace que no lo aplique un empry-cells */
+        border-collapse: collapse;
+    }
+
+    table.t1:hover{
+    border-collapse:separate;
+    border-spacing: 0.7rem;
+
+
+    }
+
+     th{
+        padding: 1rem;
+    }
+
+     td{
+        text-align: right;
+        padding-right: 1rem;
+    }
+
+     th, td{
+        border: .1rem solid red;
+    }
+
+
+table.t2{
+    border: .1rem solid;
+    padding: .3rem;
+
+}
+
+table.t2 td:nth-of-type(odd){
+    background-color: peru;
+
+}
+
+table.t2 td:nth-of-type(even){
+    background-color: rgb(205, 63, 146);
+
+}
+
+</style>
+
+
+
+<body>
+    <h1>Tablas en html</h1>
+    <table class="t1">
+        <tr><!-- filas -->
+            <th><!-- celdas --> </th>
+            <th>Examen 1</th> <!-- th es la cabecera de una tabla -->
+            <th>Examen 2</th>
+            <th>Examen 3</th>
+         </tr>
+
+         <tr><!-- filas -->
+            <th scope="row">Alumno 1<!-- celdas --> </th>
+            <td>5</td>
+            <td>7</td>
+            <td>7</td>
+         </tr>
+
+         <tr><!-- filas -->
+            <th>Alumno 2<!-- celdas --> </th>
+            <td>6</td>
+            <td>4</td>
+            <td>9</td>
+            
+         </tr>
+
+         <tr><!-- filas -->
+            <th>Alumno 3<!-- celdas --> </th>
+            <td>3</td>
+            <td>7</td>
+            <td>5</td>
+         </tr>
+    </table>
+<hr>
+    <table class="t2">
+            <tr><!-- filas -->
+                <th colspan="2">Notas Front</th> <!-- expandir columnas -->
+                
+                <th scope="col">Examen 1</th> 
+                <th scope="col">Examen 2</th>
+                <th scope="col">Examen 3</th>
+             </tr>
+    
+             <tr><!-- filas -->
+                <th rowspan="2" scope="rowgroup">Alumno 1<!-- celdas --> </th>
+                <th scope="row">Teoría</th>
+                <td>5</td>
+                <td>7</td>
+                <td>7</td>
+             </tr>
+
+             <tr><!-- filas -->
+              
+                <th scope="row">Práctica</th>
+                <td>5</td>
+                <td>7</td>
+                <td>7</td>
+             </tr>
+    
+             <tr><!-- filas -->
+                <th rowspan="2" scope="rowgroup">Alumno 2 </th> <!-- expandir celdas -->
+                <th scope="row">Teoría</th>
+                <td>6</td>
+                <td>4</td>
+                <td>9</td>
+                
+             </tr>
+    
+             <tr><!-- filas -->
+                
+                <th scope="row">Práctica</th>
+                <td>3</td>
+                <td>7</td>
+                <td>5</td>
+             </tr>
+
+             <tr><!-- filas -->
+                <th rowspan="2" scope="rowgroup">Alumno 3<!-- celdas --> </th>
+                <th scope="row">Teoría</th>
+                <td>6</td>
+                <td>4</td>
+                <td>9</td>
+                
+             </tr>
+    
+             <tr><!-- filas -->
+                
+                <th>Práctica</th>
+                <td>3</td>
+                <td>7</td>
+                <td>5</td>
+             </tr>
+        </table>
+</body>
+</html>
