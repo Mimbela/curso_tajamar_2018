@@ -1,14 +1,36 @@
-@import url('https://fonts.googleapis.com/css?family=Lobster');
+/* @import url('https://fonts.googleapis.com/css?family=Lobster'); */
+
+*,
+*::before, *::after,
+*::before, *:after {
+    box-sizing: border-box;
+}
 
 
-body{
-    font-family: 'Raleway', sans-serif;
+.container{ /* IMPORTANTE, LAS INSTRUCCIONES PARA EL CONTENEDOR */
+    width: 80%;
+    max-width: 1080px;/* para que no se encoja hasta el límite de no ver la letra, los max y min van en px */
+    min-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 
 }
 
 
+body{
+    font-family: 'Lora', serif;
+
+}
+
+h1{
+    font-family: 'Lobster', cursive;
+    
+}
 
 header p{
+    font-family: 'Lobster', cursive;
     color: maroon;
     font-size: 1.5rem;
     font-weight: bold;
@@ -16,13 +38,11 @@ header p{
 
 /* footer p{
     color: navy;
-
-
 } */
 
 article .p2+p:hover { /*aplica el tamaño solo al p*/
    /*  color: blue */
-   font-size: 4rem;
+   font-size: 2rem;
 }
 
 article .p2+p:first-letter {
@@ -34,17 +54,17 @@ article .p2+p:first-line {
     font-weight: bold;
 }
 
-footer:hover /* p.derechos */{
+footer:hover /* p.autora */{
     font-size: 2rem;
-    color: chartreuse;
+    color: darkred;
 }
 
 aside a:link{
-    color: indigo
+    color: rgb(26, 130, 0)
 }
 
 aside a:visited{
-    color: gold
+    color: rgb(255, 17, 0)
 
 }
 
@@ -64,5 +84,16 @@ section::after {  /*pseudoelemento*/
     content: "termina lo bueno";
     color: salmon;
 }
+
+/* p{
+text-align: justify; con esto alineamos el texto
+}
+*/
+
+.actividades{
+    list-style-type: square; /* ponemos viñetas a las listas */
+}
+
+
 
 

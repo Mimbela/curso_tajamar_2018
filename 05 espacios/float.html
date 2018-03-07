@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Float</title>
+</head>
+
+<style>
+
+   /*  *{
+        box-sizing: border-box;
+    } */
+
+
+    aside{/* esto es la tipica informacion extra */
+        border-bottom: .1rem solid;
+        border-top: .1rem solid;
+        padding: 2rem;
+        width: 40%;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-bottom: 2rem;
+        float: left; /* con esto el texto se acopla al aside, se pone el texto a la izquierda */
+
+    
+    }
+
+
+    ul{
+        list-style-position: inside/* hace que lo puntitos se alineen. */
+    }
+    
+    .clear{
+        clear: left;/* no deja que nada flote al alrededor */
+
+
+
+    }
+
+</style>
+
+<body>
+    <h1>Usando float</h1>
+
+    <aside>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, error voluptatibus. Repudiandae corporis provident vero temporibus quo modi molestiae! Assumenda fugiat quos impedit explicabo. Error molestiae iure accusantium atque. Cumque.</p>
+        <p>Labore error esse tempora ad quaerat omnis inventore velit magni rerum cumque perferendis illum vitae ut explicabo corporis eius aut, sed, saepe nemo eveniet nisi necessitatibus ea. Exercitationem, quasi reiciendis!</p>
+        
+    </aside>
+
+
+
+    <p class="clear rojo >"><!-- las clases son acumulables -->Quo praesentium placeat nemo officiis inventore neque laudantium et, facere necessitatibus sint numquam alias esse laboriosam aperiam iusto. Et, odio quis. Maiores odit cupiditate mollitia, corrupti quasi vitae debitis doloremque.</p>
+    <p>Debitis molestias a quasi iste ea corrupti blanditiis consequuntur ipsum incidunt ex! Inventore error facilis, quas voluptatum, mollitia unde quibusdam doloribus maiores ipsa eaque earum? Accusantium in animi totam quo!</p>
+    <ul> <!-- ul>li*5{Item $} -->
+        <li>Item1</li>
+        <li>Item2</li>
+        <li>Item3</li>
+        <li>Item4</li>
+        <li>Item5</li>
+    </ul>
+
+<p>Omnis eveniet repellat aperiam reiciendis voluptates sunt quia ratione perspiciatis, assumenda eaque deserunt suscipit necessitatibus, in ad, adipisci vel quae ducimus ipsum? Ipsa beatae, vero laudantium minus quidem neque. Esse.</p>
+    <p>Quo praesentium placeat nemo officiis inventore neque laudantium et, facere necessitatibus sint numquam alias esse laboriosam aperiam iusto. Et, odio quis. Maiores odit cupiditate mollitia, corrupti quasi vitae debitis doloremque.</p>
+    <p>Debitis molestias a quasi iste ea corrupti blanditiis consequuntur ipsum incidunt ex! Inventore error facilis, quas voluptatum, mollitia unde quibusdam doloribus maiores ipsa eaque earum? Accusantium in animi totam quo!</p>
+</body>
+</html>

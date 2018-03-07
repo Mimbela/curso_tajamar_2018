@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    *{
+        box-sizing: border-box;
+    }
+
+    p{
+        background-color: olive;
+        width: 20%;
+        padding: 1rem;
+        float: left;
+
+    }
+
+    p:not(:last-of-type){ /* el último de los párrafos */
+        margin-right: 6.66%;
+
+
+    }
+
+    .container{ /* IMPORTANTE, LAS INSTRUCCIONES PARA EL CONTENEDOR */
+    width: 90%;
+     border: 1px solid; 
+    /* margin: 0 auto; */
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+
+    .container::after{/* esto es un patrón,IMPORTANTE,APRENDERLA */
+        content: '';
+        display: block; /* propiedad muy importante, define como se muestra cada cosa */
+        clear: both;
+
+
+    }
+    
+    
+
+</style>
+<body>
+    <div class="container">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium suscipit nam saepe corrupti, nesciunt commodi, veritatis atque, maxime veniam incidunt ipsam quibusdam hic asperiores voluptates quidem placeat. Possimus, reiciendis sunt.</p>
+    <p>Dolor neque, soluta tenetur incidunt necessitatibus cumque illo deserunt quos praesentium quibusdam? Ad minima dolores perferendis doloribus iure perspiciatis fugiat sed, autem debitis, assumenda corporis laudantium. Sed deleniti fugiat eos.</p>
+    <p>Hic iure quae reiciendis molestiae aut? Aliquid officiis consequatur, minima, quasi fugit quibusdam nemo voluptatibus enim delectus assumenda dolores. Illum quidem nobis voluptates recusandae vero quis, enim cupiditate deleniti soluta?</p>
+    <p>Provident quae incidunt accusamus, sint sequi suscipit excepturi magni ut facere laboriosam similique! Repudiandae saepe odit deleniti dolorem earum, iusto quis tempore commodi incidunt similique quam exercitationem esse error tenetur?</p>
+    </div>
+</body>
+</html>
