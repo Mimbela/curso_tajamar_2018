@@ -8,7 +8,7 @@
 
 
 body{
-    background-color: rgba(135, 104, 106, 1);
+    background:-webkit-gradient(linear, 80% 20%, 10% 21%, from(#C1D600), to(#FF4E28));
 
 
 }
@@ -128,4 +128,8 @@ table.visitantes td:nth-of-type(even){
 
 table.visitantes td:nth-of-type(odd){
     background-color: lawngreen;
+}
+
+.portada{
+    width: 100%;
 }
