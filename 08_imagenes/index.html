@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+     /* LAS imágenes son inline block */
+        /* img{
+            width: 300px;
+            margin:2rem;
+
+        } */
+        
+        div{
+            border: 1px solid;
+           
+            
+        }
+    
+       .dosimg img{
+            vertical-align: bottom; /* esto es para alinear la imagen y que no sobre un hueco entre imagen e imagen */
+
+        }
+
+       .dosimg img:not(:first-of-type){
+            margin-left: -4px;
+        }
+
+    </style>>
+
+
+</head>
+<body>
+    <h1>Imágenes en la web</h1>
+    <div class="dosimg"><img src="http://via.placeholder.com/350x150">
+        <img src="http://via.placeholder.com/350x150">
+    </div>
+
+    <div> <img src="http://via.placeholder.com/350x150">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab u
+                t est, culpa animi quaerat temporibus maiores eaque incidunt enim omnis exercitationem quo aperiam dolorem, ipsum maxime sunt possimus libero praesentium.</p>
+   
+   </div>
+</body>
+</html>

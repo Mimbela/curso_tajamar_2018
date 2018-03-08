@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Posición></title>
+
+        <style>
+            *{box-sizing:border-box;}
+
+
+            body{
+                height: 100vh; /* VH establece que es toda la pantalla */
+                opacity: .5;/* opacidad del color de todo el body , se hereda*/
+                
+            }
+
+
+            .container {
+                width: 90%;
+                margin: 5%;
+                height: 90%;/* ojo con el alto del body, porque es interminable */
+                border: 1px solid;
+                position: relative;
+
+            }
+
+            .caja{
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                border: 1px solid;
+
+            }
+            
+
+            .caja1{
+                top: 50px;
+                left: 50px;
+                background-color: blue;
+                opacity: .5;  /* da opacidad al color es una propiedad */
+
+
+            }
+
+            .caja2{
+                top:100px;
+                left: 100px;
+                background-color: brown;
+            }
+
+
+            .caja3{
+                top: 200px;
+                left: 300px;
+                moz-box-shadow:inset -28px -9px 49px #000000;
+-webkit-box-shadow:inset -28px -9px 49px #000000;
+box-shadow:inset -28px -9px 49px #000000;
+            }
+
+
+        </style>
+        </head>
+
+<body>
+        <div class="container">
+           
+            <div class="caja caja1"> </div>
+            
+            <div class="caja caja2">hola</div>
+        </div>
+
+        <div class="caja caja3"></div>
+    
+</body>
+</html>
+
+<!-- color picker -->

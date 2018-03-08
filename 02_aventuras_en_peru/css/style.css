@@ -7,6 +7,12 @@
 }
 
 
+body{
+    background-color: rgba(135, 104, 106, 1);
+
+
+}
+
 .container{ /* IMPORTANTE, LAS INSTRUCCIONES PARA EL CONTENEDOR */
     width: 80%;
     max-width: 1080px;/* para que no se encoja hasta el límite de no ver la letra, los max y min van en px */
