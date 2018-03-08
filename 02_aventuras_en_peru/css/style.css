@@ -74,14 +74,14 @@ article .p2+p:first-line{
 }
 
 section::before { /*pseudoelemento*/
-    content: "Empieza lo bueno";
+    content: "***";
     color: salmon;
 
 }
 
 section::after {  /*pseudoelemento*/
 
-    content: "termina lo bueno";
+    content: "----";
     color: salmon;
 }
 
@@ -95,5 +95,31 @@ text-align: justify; con esto alineamos el texto
 }
 
 
+.visitantes{
+    border: .1rem solid black;
+    padding: .3rem;
+}
 
 
+th, td{
+        border: .1rem solid red;
+        /* text-align: right;
+        padding-right: 1rem; */
+    }
+
+
+th
+{
+    text-align: center;
+    padding-right: 1rem;
+    background-color: dimgray;
+
+}
+
+table.visitantes td:nth-of-type(even){
+    background-color: khaki;
+}
+
+table.visitantes td:nth-of-type(odd){
+    background-color: lawngreen;
+}
