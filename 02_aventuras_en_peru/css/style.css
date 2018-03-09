@@ -8,10 +8,13 @@
 
 
 body{
-    background:-webkit-gradient(linear, 80% 20%, 10% 21%, from(#C1D600), to(#FF4E28));
+    background-color: rgba(63, 129, 42, 0.3);
+    font-family: 'Lora', serif;
 
 
 }
+
+
 
 .container{ /* IMPORTANTE, LAS INSTRUCCIONES PARA EL CONTENEDOR */
     width: 80%;
@@ -25,10 +28,31 @@ body{
 }
 
 
-body{
-    font-family: 'Lora', serif;
+section { /* usamos la etiqueta FIGURE porque contiene una imagen */
+    width: 100%; 
+  
+}
+
+.ka{
+    float: left;
+    padding-right: 2rem;
+    vertical-align: bottom; 
+}
+
+.treck{
+    float: left;
+    padding-right: 2rem;
+    vertical-align: bottom; 
+
 
 }
+
+.portada{
+    width: 100%;
+}
+    
+
+
 
 h1{
     font-family: 'Lobster', cursive;
@@ -79,18 +103,18 @@ article .p2+p:first-line{
 
 }
 
-section::before { /*pseudoelemento*/
+/* section::before { 
     content: "***";
     color: salmon;
 
 }
 
-section::after {  /*pseudoelemento*/
+section::after {  
 
     content: "----";
     color: salmon;
 }
-
+ */
 /* p{
 text-align: justify; con esto alineamos el texto
 }
@@ -108,7 +132,7 @@ text-align: justify; con esto alineamos el texto
 
 
 th, td{
-        border: .1rem solid red;
+        border: .1rem solid ;
         /* text-align: right;
         padding-right: 1rem; */
     }
@@ -118,7 +142,7 @@ th
 {
     text-align: center;
     padding-right: 1rem;
-    background-color: dimgray;
+    background-color:  rgba(15, 20, 20, 0.5);
 
 }
 
@@ -127,9 +151,8 @@ table.visitantes td:nth-of-type(even){
 }
 
 table.visitantes td:nth-of-type(odd){
-    background-color: lawngreen;
+    background-color:  rgba(63, 129, 42, 0.3);;
 }
 
-.portada{
-    width: 100%;
-}
+
+
