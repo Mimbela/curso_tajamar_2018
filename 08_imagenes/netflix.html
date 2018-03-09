@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Netflix</title>
+
+    <style>
+
+    header{
+        
+    }    
+    h1{
+        background-image: url(./img/netflix.png);
+        background-repeat: no-repeat;
+        height: 12rem;
+    }
+
+    h1 span{
+        display: none;/* esto es para que lo veamos solo los desarroladores, para el indexador */
+        
+    }
+
+    iframe{ /* iframe es una ventana a otra pagina web */
+        width: 100%;
+        height: 50vh;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>
+            <span>Netflix</span><!-- un elemento en linea neutro, sin significado -->
+            </h1>
+
+    </header>
+
+    <main>
+        <p>La web original</p>
+        <iframe src="http://www.tajamar.es/" frameborder="0"></iframe>
+    </main>
+  
+</body>
+</html>

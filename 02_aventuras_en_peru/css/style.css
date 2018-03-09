@@ -37,13 +37,14 @@ section { /* usamos la etiqueta FIGURE porque contiene una imagen */
     float: left;
     padding-right: 2rem;
     vertical-align: bottom; 
+    width: 30%;
 }
 
 .treck{
     float: left;
     padding-right: 2rem;
     vertical-align: bottom; 
-
+    width: 30%;
 
 }
 
@@ -56,12 +57,13 @@ section { /* usamos la etiqueta FIGURE porque contiene una imagen */
 
 h1{
     font-family: 'Lobster', cursive;
+    color: maroon;
     
 }
 
 header p{
     font-family: 'Lobster', cursive;
-    color: maroon;
+    
     font-size: 1.5rem;
     font-weight: bold;
 }
