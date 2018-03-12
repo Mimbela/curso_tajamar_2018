@@ -1,0 +1,85 @@
+*,
+*::after, *::before,
+*::before, *::after{
+    box-sizing: border-box;
+}
+
+.container{
+    width: 90%;
+    max-width:  1200px ; /* esto es para que el ancho no exceda de un tamaño, aunque lo hayamos puesto un width de 90%, se pone en pixels */
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+main{
+    min-height: 80vh; /* lo ultimo para medir contenido, sale el scroll */
+}
+
+nav ul{ /* quitamos los puntitos */
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+nav{
+     margin-bottom: 1rem; 
+}
+
+
+nav a{
+    text-decoration: none;
+    color: unset;/* quitamos los colores que pueda tener */
+   
+}
+/* menu 1 basado en display inline block */
+
+nav.menu1 li:first-of-type{
+    border-left: solid black;
+}
+
+nav.menu1 li{
+    display: inline-block;
+   border-right: solid red;
+    
+}
+
+nav.menu1 a{
+    display: block;
+    padding: 0.5rem  3rem;
+
+}
+/* menu2 basado en float */
+
+
+nav.menu2{
+    background-color: salmon;
+    overflow: hidden; /* cuando se colapsa y no se ve el color por el float `ponemos esta etiqueta para que se vea el colo salmon */
+}
+
+nav.menu2 ul{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+nav.menu2 li{
+    width: 20%;
+    float: left; /* como lleva float debe llevar un width en % */
+}
+
+nav.menu2 a{
+    display: block;
+    padding: 3rem 3rem;
+    text-align: center;
+    border:solid purple;
+}
+
+nav.menu2 a:hover{
+    background-color: orchid;
+    color: salmon;
+
+}

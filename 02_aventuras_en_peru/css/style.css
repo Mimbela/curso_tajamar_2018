@@ -156,5 +156,8 @@ table.visitantes td:nth-of-type(odd){
     background-color:  rgba(63, 129, 42, 0.3);;
 }
 
+video{
+    width: 100%;}
+
 
 
