@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    /* inline no tiene tamaño */
+
+    .control-group {
+        padding: .4rem;
+    }
+
+
+    .control-group label {
+        display: inline-block;
+        /* lo forzamos ya que los formularios son en linea */
+        width: 20%;
+        min-width: 10rem;
+    }
+
+    .control-group input:not([type="button"]) {
+        width: 40%;
+        min-width: 10rem;
+    }
+
+    input:focus {
+        border-color: crimson;
+    }
+</style>
+
+
+
+
+
+
+<body>
+    <header>
+        <h1>Ejemplo de formulario</h1>
+    </header>
+
+    <main>
+        <form action="" method="GET">
+            <!-- contenedor del formulario -->
+            <fieldset>
+                <!-- es como un div para dividir el formulario en trozos -->
+                <legend>Datos personales</legend>
+
+                <div class="control-group">
+                    <label for="nombre">Escribe tu nombre</label>
+                    <!-- en el for ponemos el id -->
+                    <input type="text" name="nombre" id="nombre" autofocus required maxlength="20" minlength="2" >
+                </div>
+
+
+                <div class="control-group">
+                    <label for="apellido">Escribe tu apellido</label>
+                    <!-- en el for ponemos el id -->
+                    <input type="text" name="apellido" id="apellido"  required  placeholder="Escribe si puedes tus dos apellidos">
+                    <!-- placeholder te sale un texto un poco transparente como un ejemplo en la casilla -->
+                </div>
+
+            </fieldset>
+
+
+
+            <fieldset>
+                <legend>Otros datos</legend>
+                <textarea name="datos" id="datos" cols="30" rows="10">
+
+                </textarea>
+            </fieldset>
+
+            <fieldset>
+
+                <legend>Datos académicos</legend>
+                
+                
+
+
+
+                <div class="check-group">
+                    <input type="checkbox" name="isok" id="isok">
+                    <label for="isok">Estoy de acuerdo con los datos.</label>
+                </div>
+
+                <div class="check-group">
+                    <input type="checkbox" name="isok2" id="isok2">
+                    <label for="isok2">También estoy de acuerdo con...</label>
+                </div>
+
+                <legend>Qué turno quieres</legend>
+                <div class="radio-group">
+                    <input type="radio" name="turno" id="mañana" value="mañana">
+                    <label for="mañana">Mañana</label>
+
+                    <input type="radio" name="turno" id="tarde" value="tarde">
+                    <label for="mañana">tarde</label>
+
+                    <input type="radio" name="turno" id="noche" value="noche">
+                    <label for="mañana">noche</label>
+                </div>
+
+
+                <div class="control-group">
+                    <label for="curso">Selecciona un curso</label>
+                    <select name="curso" id="curso" multiple>
+                        <option value="front">Desarrollo front</option>
+                        <option value="web">Diseño web</option>
+                        <option value="node">DServidores Node</option>
+                        <option value="sql">SQL</option>
+                    </select>
+
+                </div>
+
+            </fieldset>
+
+
+
+
+            <fieldset>
+
+                <legend>Correo electrónico</legend>
+                <div class="control-group">
+                    <label for="email">e-mail</label>
+                    <!-- en el for ponemos el id -->
+                    <input type="email" name="email" id="email">
+                    <!-- si ponemos password en type salen asteriscos -->
+
+                </div>
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>Password</legend>
+                <div class="control-group">
+                    <label for="password">password</label>
+                    <!-- en el for ponemos el id -->
+                    <input type="password" name="password" id="password">
+                    <!-- si ponemos password en type salen asteriscos -->
+
+                </div>
+
+            </fieldset>
+            <fieldset>
+
+
+                <div class="control-group">
+                    <button type="button">saludar</button>
+                    <!-- <input type="button" value="saludar"> -->
+
+
+
+
+                    <button type="submit">enviar</button>
+                    <!-- <input type="submit" value="enviar"> -->
+                    <button type="reset">borrar</button>
+                </div>
+
+            </fieldset>
+
+
+
+
+
+            <div class="control-group">
+                <button type="submit">Enviar</button>
+                <!-- botón de enviar -->
+            </div>
+
+
+
+
+        </form>
+    </main>
+</body>
+
+</html>
