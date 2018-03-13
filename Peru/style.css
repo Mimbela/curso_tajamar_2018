@@ -7,6 +7,7 @@
 body{
    
    width: 100%;
+   background-image: url("./img/mar.jpg")
    
     }
 
@@ -16,7 +17,7 @@ body{
     height: 15rem;
     width: 90%;
     background-color: azure;
-    background-image: url("img/uno.jpg");
+    background-image: url("./img/uno.jpg");
     background-repeat: no-repeat; 
     margin-left: auto;
     margin-right: auto;
@@ -51,17 +52,11 @@ h1{
     font-family: 'Lora', serif;
 }
 
-.resumen{
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    height: 5rem;
-    text-align: justify;
+
     
     
     
-    
-}
+
 
 .resumen1{
     margin-left: auto;
@@ -83,4 +78,10 @@ h1{
 
 img{
     width: 100%;
+}
+
+footer{
+    text-align: center;
+    display: inline-block;
+    width: 100%
 }
