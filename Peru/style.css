@@ -6,8 +6,9 @@
 
 body{
    
-   width: 100%;
-   background-image: url("./img/mar.jpg")
+   width: 90%;
+   background-image: url("./img/mar.jpg");
+   font-family: 'Lora', serif;
    
     }
 
@@ -16,6 +17,7 @@ body{
 .container{
     height: 15rem;
     width: 90%;
+  
     background-color: azure;
     background-image: url("./img/uno.jpg");
     background-repeat: no-repeat; 
@@ -49,7 +51,8 @@ aside{/* esto es la tipica informacion extra */
 }
 
 h1{
-    font-family: 'Lora', serif;
+    
+    font-family: 'Lobster', cursive;
 }
 
 
@@ -64,7 +67,7 @@ h1{
     float:left ;
     width: 50%;
     text-align: left;
-    padding: 2rem;
+    padding: 5rem;
 }
 
 .resumen2{
@@ -73,7 +76,7 @@ h1{
     float: left;
     width: 50%;
     text-align: left;
-    padding: 2rem;
+    padding: 5rem;
 }
 
 img{
