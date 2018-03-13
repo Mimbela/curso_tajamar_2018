@@ -69,6 +69,7 @@ h1{
     float:left ;
     width: 50%;
     text-align: left;
+    padding: 2rem;
 }
 
 .resumen2{
@@ -77,4 +78,9 @@ h1{
     float: left;
     width: 50%;
     text-align: left;
+    padding: 2rem;
+}
+
+img{
+    width: 100%;
 }
