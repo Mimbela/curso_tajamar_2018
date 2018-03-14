@@ -1,8 +1,9 @@
+'use strict' //etiqueta el uso estricto del lenguaje, te obliga a codificar todo correctamente.
 
 
 //a y b son argumentos PRIMERO
 function sumar(a, b) {
-    c = a + b
+    var c = a + b
     console.log("El resultado es ", c)
     return c
 
@@ -10,7 +11,7 @@ function sumar(a, b) {
 
 
 function restar(a, b) {
-    c = a - b
+    var c = a - b
     console.log("El resultado es ", c)
     return c
 }
