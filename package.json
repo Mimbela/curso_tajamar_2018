@@ -1,0 +1,31 @@
+{
+  "name": "curso_tajamar_2018",
+  "version": "1.0.0",
+  "description": "ejercicios del curso",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/senin8/curso_tajamar_2018.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "js",
+    "learning"
+  ],
+  "author": "sandra mimbela",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/senin8/curso_tajamar_2018/issues"
+  },
+  "homepage": "https://github.com/senin8/curso_tajamar_2018#readme",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}
