@@ -54,3 +54,14 @@ if(x ===12){ //=x>0
 
 }
 console.log (!!x) //esto es para voncertir a booleano
+
+x = 'abc'
+y= 'def'
+console.log (x < y) //comparar 
+
+console.log (x.length === y.length) //comparar
+
+//? : EXPRESIÓN ? TRUE: ? FALSE
+
+let edad = 12
+console.log (edad > 30 ? 'Buenos días': 'Hola chaval') //ESTO ES COMO UN IF, PARA EXPRESIONES MUY COMPACTAS //OPERADOR TERNARIO
