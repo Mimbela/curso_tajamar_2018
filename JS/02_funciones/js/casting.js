@@ -1,14 +1,30 @@
+//************************************************************************************************************************ */
+/* CASTING
+PARSEINT parseFloat
+Number
++
 
+
+NÚMEROS RAROS:
+NaN
+Infinito
+
+*/
+//***************************************************************************************************************************** */
+//let x //ambito global
 
 function main() {
 
-    let num1 = 23 //number
-    let num2 = '20' //string
+     let num1 = 23 //number //ambito local a la función
+    
+        
+    
+   
+    let num2 = '20' //string / {let num2=20 estaría dentro del bloque
 
+    //let r = num1 - num2 //esto da error porque num2 está dentro del bloque y fuera del bloque no se le ve
 
-    let r = num1 - num2
-
-    console.log(r)
+    //console.log(r)
     console.log(typeof r) //typeof te dice el tipo que es
     console.log(typeof num2)
 

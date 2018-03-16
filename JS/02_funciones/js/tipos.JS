@@ -1,4 +1,13 @@
+//***************************************************************************************** */
+//Tipo object se genera por jason
+//las partes de un objeto se llaman propiedades, son a su vez valores y de tipos. Propiedades de tipo string, booleano, object (subtipos : object y array)
+//Array se usan corchetes, es una mezcla de varios tipos, son modificables, no tienen longitud predefinida, ni secuenciales
+// let x {} tipo objeto
+// let y [] tipo array
+//
 
+
+//**************************************************************************************** */
 
 let nombre = 'pepe' //string
 let edad = 23 //number

@@ -1,4 +1,18 @@
+//*************************************************************************** */
+//             x = 1 asigna , ejem: if (x=12)-->true
+//             x = = 1  , es igual a 
+//             x = = = 1 , es idéntico
+//             x + = 1 --> x=1
+// >< compara el orden de las cadenas
+// OPERADOR TERNARIO: una expresión, lo que quiero devolver 
+ 
 
+
+
+
+
+
+//****************************************************************************** */
 //expresión de asignación
 let x = 25
 
@@ -65,3 +79,22 @@ console.log (x.length === y.length) //comparar
 
 let edad = 12
 console.log (edad > 30 ? 'Buenos días': 'Hola chaval') //ESTO ES COMO UN IF, PARA EXPRESIONES MUY COMPACTAS //OPERADOR TERNARIO
+//OPERADOR TERNARIO
+
+//*************************************************** */
+let a = 12
+let b = 2
+let c = 4
+
+
+if (a < b && a < z){
+    console.log ('Comprobado')
+
+}
+//***************************** */
+
+if ( a > b || a < z) {
+    console.log ('comprobado')
+}
+
+//-------------------------------

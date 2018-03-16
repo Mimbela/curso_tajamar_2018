@@ -1,4 +1,7 @@
+//*********************************************************** */
+// NUMBER strin y boolean son VALORES
 
+//******************************************* */
 
 //Elementales ->por valor
 //number , string, boolean
