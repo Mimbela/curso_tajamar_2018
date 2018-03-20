@@ -24,3 +24,4 @@ nomina (informacion)
 console.log (informacion.enero);
 
 //************************************************************************************************** */
+//La diferencia entre function algo(){****} y let algo function (){} es que la primera tiene HITTING

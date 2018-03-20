@@ -25,6 +25,7 @@ MostrarCalculo (n, function(){ //funtion() es una función anónima
     return n*2
 })
 
-setTimeout (function(){
-    console.log (calcularCubo(n))
-},2000)
+let mostrarResultado=  function(){
+    console.log (calcularCubo(n)) 
+}
+setTimeout (mostrarResultado , 3000)
