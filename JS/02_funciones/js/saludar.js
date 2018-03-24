@@ -9,3 +9,18 @@ function saludar () {  //creo funcion, creo la invocación
 //saludar ();
 
 saludar();
+
+
+
+//************************************/
+function despedida (){
+    console.log ("esto es una prueba de despedida")
+}
+
+despedida ()
+
+//******************************************** */
+function recordatorio (){
+    console.log ("tienes que introducir el usuario y contraseña")
+}
+recordatorio()

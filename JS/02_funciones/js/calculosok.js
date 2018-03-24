@@ -1,39 +1,31 @@
-'use strict' //etiqueta el uso estricto del lenguaje, te obliga a codificar todo correctamente.
+'use strict'
 
-
-
-function sumar(a, b) { //esto es una funcion pura
+// a y b son argumentos 
+function sumar(a, b) {
     var c = a + b
-
     return c
-
 }
-
 
 function restar(a, b) {
     var c = a - b
-
     return c
 }
 
-
 function mostrar(r) {
-    console.log("El resultado es ", r) //r HACE UNA LLAMADA
-
+    console.log("El resultado es ", r)
 }
 
-//forma 1
-var x = 123;
-var y = 34;
+// paso 2 parámetros
+var x = 123
+var y = 34
 var r = sumar(x, y)
 mostrar(r)
-
-
-//forma 2
-mostrar(sumar(123, 34));
-mostrar(sumar(4, 20));
-mostrar(sumar(85, 90));
-
+mostrar(sumar(23, 45))
+mostrar(sumar(2, 5))
+var a = 123
+var b = 34
+var r = restar(b, a)
+mostrar(r)
 //forma 3
 var a = 123;
 var b = 34;

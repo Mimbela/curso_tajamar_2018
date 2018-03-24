@@ -11,3 +11,9 @@ mostrar (`Pepe`)
 //CREADOR POR EL CONSTRUCTOR FUNCTION
 
 var suma = new Function ("a" , "b" , "")
+
+
+
+//************************************************** */
+
+
