@@ -1,4 +1,4 @@
-'use strict'
+ 'use strict' 
 
 // ES6 existen let y const con ámbito {}
 
@@ -9,22 +9,38 @@ function mostrar() {
     }
     console.log(X)  
 }
+mostrar()  
+/********************************************CALCULAR CIRCUNFERENCIA******************************************************************************** */
 
 function calcularCircunferencia(radio) {
     return 2 * Math.PI * radio
 }
 
 function moatrarCircunferencia(radio) {
-    let cir = calcularCircunferencia(radio)
+    let cir = calcularCircunferencia(radio) 
     console.log(`
     La circunferencia de radio ${radio}
     tiene de longitud ${cir}
     `)
 }
 
-const X = 5
-mostrar() 
+
 moatrarCircunferencia(5)
+//****************************************************************************************************************** */
+
+
+
+
+
+
+
+
+
+
+
+/* const Y = 5 */
+
+
 
 
 
@@ -69,3 +85,26 @@ productos.forEach (total => console.log (" El total del producto es " , total.it
 let shampoes= [{pantene: 12}, {pantene : 40}, {pantene : 29}]
 
 shampoes.forEach ( totality => console.log ("Lo que tiene que pagar por los shampoes es " , totality.pantene * 50 ))
+
+/************************************************** */
+
+
+
+/*CALCULAR  el área de una circunferencia de radio 15
+
+/*primero crearemos la funcion de la fórmula de la circunferencia : 2.pi. radio*/
+
+function crearCirculo (r){
+    return 2 * Math.PI * r
+
+}
+
+//*segundo: creamos la función de mostrar*/
+
+function mostrarCirculo(r) {
+    let res = crearCirculo (r)
+    console.log (`El área del círculo de radio ${r} es ${res} `)
+}
+
+mostrarCirculo(15)
+
