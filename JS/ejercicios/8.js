@@ -20,23 +20,16 @@ desarrollos\javascript\JS07b_Factorial_1.html
  /**CALCULEMOS EL FACTORIAL DE UN NÚMERO */
 
  function factorial(n){
-     let total =1
-     for (let i = n; i >= 1; i--) {
-             total *=i;
-         
-         
-       
-     }
-     return total
+    let total = 1
+    for ( i=n ; i > 0  ; i--){
+        total = i* total
+    }
+    return total
+ }
+ 
 
+ function mostrarFactorial (n){
+     let vista = console.log ("El resultado es " , factorial (n))
  }
 
-function mostrar(n){
-    let todo = `El resultado es ` 
-    + factorial(n)
-    console.log (todo)
-}
-
-
- mostrar(3)
- 
+ mostrarFactorial (30)
