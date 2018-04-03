@@ -12,7 +12,16 @@ por el número de valores
  */
 
  function media (){
-    
+    let notas = [3, 5,7,9]
+    let total=0
+
+    notas.forEach(element => {
+        total += element
+    });
+    total = total/notas.length
+console.log (total)
 
 
  }
+ 
+ media ()
