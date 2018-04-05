@@ -26,6 +26,8 @@
   },
   "homepage": "https://github.com/senin8/curso_tajamar_2018#readme",
   "dependencies": {
-    "http-server": "^0.11.1"
-  }
+    "http-server": "^0.11.1",
+    "query": "^0.2.0"
+  },
+  "devDependencies": {}
 }
