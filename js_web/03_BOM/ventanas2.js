@@ -1,35 +1,35 @@
-function app (){
+function app () {
 
-    
-    //definicion del objeto del dom
-    let eBtnAbrir = document.querySelector ('#btnAbrir') //asocio un manejador de evento
-    let eBtnCerrar = document.querySelector ('#btnCerrar')
+    let eBtnAbrir = document.querySelector('#btnAbrir')
+    let eBtnCerrar = document.querySelector('#btnCerrar')
+    eBtnCerrar.disabled="true"
     let ventana
     let aVentanas = []
 
+    eBtnAbrir.addEventListener('click', btnClick)
+    eBtnCerrar.addEventListener('click', btnClick)
 
+    function btnClick(ev) {
+        console.log(ev.target.id)
+        switch (ev.target.id) {
+            case 'btnAbrir':
+                ventana = window.open()
+                aVentanas.push(ventana)
+                togleButtons()
+                break
+            case 'btnCerrar':
+                aVentanas.forEach( (v) => {v.close()} )
+                togleButtons()
+                aVentanas = []
+                break
+        }
 
-    eBtnAbrir.addEventListener('click' , btnAbrir) //btnSalir no lleva parentesis porque sino la estaria ejecutando, DEFINO EL EVENTO
-    eBtnCerrar.addEventListener ('click' , btnCerrar)
-
-    function btnClick(ev){
-        console.log(ev)
-        togle
     }
 
-
-
-    
-    function btnAbrir (){
-         ventana = window.open()
-         aVentanas.push(ventana)
+    function togleButtons() {
+        eBtnAbrir.disabled = !eBtnAbrir.disabled
+        eBtnCerrar.disabled = !eBtnCerrar.disabled
     }
-
-    function btnCerrar (){
-        aVentanas.forEach((item) => {item.close()})
-        aVentanas = []
-    }
-
 }
 
 window.addEventListener('load', app)

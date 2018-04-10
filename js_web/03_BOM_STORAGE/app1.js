@@ -1,46 +1,37 @@
 (function () {
 
-    function app() {
-        let eNombre = document.querySelector("#inpNombre")
-        let eGuardar = document.querySelector("#btnGuardar")
-        let eBorrar = document.querySelector("#btnBorrar")
-        let eSaludo = document.querySelector("#outSaludo")
+    function app () {
+        let eNombre = document.querySelector('#inpNombre')
+        let eGuardar = document.querySelector('#btnGuardar')
+        let eBorrar = document.querySelector('#btnBorrar')
+        let eSaludo = document.querySelector('#outSaludo')
 
         eGuardar.addEventListener('click', guardar)
-        eBorrar.addEventListener('click', borrar)
+        eBorrar.addEventListener('click', borrar )
 
-
-        function guardar() {  // guardar: recoge y guarda
-            let nombre = eNombre.value //lo recojo, value es una propiedad
+        function guardar() {
+            let nombre = eNombre.value
             localStorage.setItem('nombre', nombre)
             saludar()
-        } //lo almacena
-        
+        }
 
-
-        function borrar() { 
+        function borrar() {
             localStorage.removeItem('nombre')
             eSaludo.innerHTML = ''
             eNombre.value = ''
-        }
-
+        }       
 
         function saludar() {
             let nombre = localStorage.getItem('nombre')
-            if (nombre) {
-                eSaludo.innerHTML = `Hola ${nombre}`
-            }
-           
-        } 
+            if(nombre) {
+                eSaludo.innerHTML = `Hola ${nombre}` 
+            } 
+        }
+
         saludar()
     }
+
+
+
     window.addEventListener('load', app)
 })()
-
-
-
-
-
-
-
-

@@ -1,0 +1,20 @@
+.control-group {
+    padding: .4rem;
+}
+
+
+.control-group label {
+    display: inline-block;
+    /* lo forzamos ya que los formularios son en linea */
+    width: 20%;
+    min-width: 10rem;
+}
+
+.control-group input:not([type="button"]) {
+    width: 40%;
+    min-width: 10rem;
+}
+
+input:focus {
+    border-color: crimson;
+}

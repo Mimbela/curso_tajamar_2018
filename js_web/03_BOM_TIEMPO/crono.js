@@ -21,7 +21,7 @@ clearTimeout(idT) */
                 aBotones[0].textContent = 'Continuar'
                 aBotones[1].disabled = false
                 aBotones[2].disabled = true   
-                idI = setInterval(function() { //permite establecer la ejecución periodica y repetitiva de una funcion
+                idI = setInterval(() => {
                     crono += 0.01
                     eCrono.innerHTML = crono.toFixed(2)
                 }, 100)
@@ -29,7 +29,7 @@ clearTimeout(idT) */
                 aBotones[0].disabled = false
                 aBotones[1].disabled = true
                 aBotones[2].disabled = false 
-                clearInterval(idI) //devuelven un identificador: hace posible interrumpir la cuenta atrás o la repetición.
+                clearInterval(idI)
             } else { // btnReset
                 aBotones[0].disabled = false
                 crono = 0
