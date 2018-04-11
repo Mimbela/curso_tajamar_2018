@@ -1,3 +1,2 @@
-import {formulario} from './Formulario.js'
-
-window.addEventListener ('load' , () => new formulario ())
+import { Formulario } from './formulario.js'
+window.addEventListener('load', () => new Formulario())
