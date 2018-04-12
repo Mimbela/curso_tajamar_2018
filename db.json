@@ -1,0 +1,11 @@
+{
+    "posts": [
+      { "id": 1, "title": "Carnero Salvaje", "author": "Sandra" },
+      { "id": 2, "title": "País de las maravillas", "author": "Sandra", "contenido": "blaa blaaaaa blaaaaa" }
+    ],
+    "comments": [
+      { "id": 1, "body": "un comentario", "postId": 1 },
+      { "id": 2, "body": "otro comentario", "postId": 2 }
+    ],
+    "profile": { "name": "typicode" }
+  }
