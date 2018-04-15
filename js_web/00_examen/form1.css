@@ -1,0 +1,29 @@
+*, *::after, *::before, *:after, *:before {
+    box-sizing: border-box;
+}
+body {
+    background-color: bisque;
+    margin: 3rem;
+}
+
+main button{
+    color: maroon
+}
+
+
+
+.control-group {
+    padding: 0.4rem;
+}
+.control-group label {
+    display: inline-block;
+    width: 20%;
+    min-width: 10rem;
+}
+.control-group input:not([type="button"]) {
+    width: 40%;
+    min-width: 10rem;
+}
+.ocultar {
+    display: none;
+}
