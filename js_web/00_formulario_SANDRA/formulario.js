@@ -7,84 +7,79 @@ import { CURSOS } from "./cursos.js"
 export class Formulario {
     constructor() { //no es una plantilla, es para inicializar valores
         this.datos = {
-            nombre: '',
-            apellido: '',
-            nacimiento: '',
+
             email: '',
             passwd: '',
-            datos: '',
-            isOk: false, //esta prpopiedad se inicializa a false
-            isOk2: false,
-            turno: '',
-            curso: {},
+            nombre: '',
+            apellido: '',
+            apellido2: '',
+            fecha: '',
+            musica: '',
+            viajar: '',
+            pintura: '',
+            fotografia: '',
+            cine: '',
+            lectura: '',
+            deporte: '',
+            baile: '',
+            cursos: {},
             asignaturas: []
         }
         //inicializamos elementos y ejecución de funciones predeterminadas,dentro del constructor
-        this.isLeido = false
+
         this.accederDom()//se van a inicializar todos los elementos de acceso al DOM
         this.definirManejadores()//está definiendo todos los eventos que va a tener html
     }
+
     accederDom() {
         this.domFormulario = document.querySelector('#form1')
-        this.domBtnSaludar = document.querySelector('#btnSaludar')
+
         this.domInpNombre = document.querySelector('#nombre')
         this.domInpApellido = document.querySelector('#apellido')
+        this.domInpApellido2 = document.querySelector('#apellido2')
         this.domInpFecha = document.querySelector('#fecha')
         this.domInpEmail = document.querySelector('#email')
         this.domInpPasswd = document.querySelector('#passwd')
-        this.domAreaDatos = document.querySelector('#datos')
-        this.domRadioTurno = document.querySelectorAll('[name="turno"]')
-        // this.domRadioTurno = document.getElementsByName(turno)
-        this.domCbxIsOk = document.querySelector('#isOk')
-        this.domCbxIsOk2 = document.querySelector('#isOk2')
+
+
+
+
         this.domSelectCurso = document.querySelector('#curso')
         this.domSelectTopics = document.querySelector('#topics')
         this.domDivTopics = document.querySelector('#div_topics')
         this.domDivResultados = document.querySelector('#resultados')
-        this.domFieldAcedemic = document.querySelector('#acedemic')
-    }
 
+    }
     definirManejadores() {
         this.domFormulario.addEventListener('submit', this.enviar.bind(this))
-        this.domCbxIsOk.addEventListener('change', this.completar.bind(this))
         this.domSelectCurso.addEventListener('change', this.presentarAsignaturas.bind(this))
+        this.domFormulario.addEventListener('reset', this.resetForm.bind(this));
     }
 
-    saludar() {
-        console.log('Hola amigos')
-    }
+
 
     enviar(ev) {
-        console.log(ev)
+
         this.recogerDatos()
         this.presentarDatos()
-        if (!this.isLeido) {
-            ev.preventDefault()
-        }
     }
 
-    /* borrar () {
-    } */
-
-    completar() {
-        // this.domFieldAcedemic.disabled = !this.domFieldAcedemic.disabled
-        this.domFieldAcedemic.classList.toggle('ocultar')
-        if (this.domFieldAcedemic.classList.contains('ocultar')) {
-            this.domRadioTurno[0].checked = true
-            this.domSelectCurso.selectedIndex = 0
-        }
+    resetForm(ev) {
+        this.datos = new Formulario()
     }
 
+    
+    
     recogerDatos() {
         this.datos.nombre = this.domInpNombre.value
         this.datos.apellido = this.domInpApellido.value
-        this.datos.nacimiento = new Date(this.domInpFecha.value)
+        this.datos.apellido2 = this.domInpApellido2.value
+        this.datos.fecha = new Date(this.domInpFecha.value)
         this.datos.email = this.domInpEmail.value
         this.datos.passwd = this.domInpPasswd.value
-        this.datos.datos = this.domAreaDatos.value
-        this.datos.turno = this.procesarRadio(this.domRadioTurno)
-        this.datos.isOk = this.domCbxIsOk.checked
-        this.datos.isOk2 = this.domCbxIsOk2.checked
+
+
+       
         this.datos.curso = this.procesarSelect(this.domSelectCurso)
     }
 
@@ -125,9 +120,8 @@ export class Formulario {
             <li>e-Mail: ${this.datos.email}</li>
             <li>Contraseña: ${this.datos.passwd}</li>
             <li>Datos extra: ${this.datos.datos}</li>
-            <li>Aceptadas condiciones: ${this.datos.isOk ? 'Si' : 'No'}</li>
-            <li>Aceptadas condiciones 2 ${this.datos.isOk2 ? 'Si' : 'No'}</li>
-            <li>Turno: ${this.datos.turno}</li>
+           
+           
             <li>Curso: ${this.datos.curso.text}</li>
            
 
@@ -140,5 +134,3 @@ export class Formulario {
 
 
 }
-
-
