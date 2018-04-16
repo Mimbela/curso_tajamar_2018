@@ -1,19 +1,15 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Formulario</title>
     <link rel="stylesheet" href="./form1.css">
     <script src="./form_app_1.js" type="module"></script>
+    <title>Document</title>
 </head>
 
-
-
 <body>
-    <header>Datos personales</header>
     <main>
         <form action="" method="get" id="formExam">
             <fieldset>
@@ -43,8 +39,10 @@
                         <input type="radio" id="progObj" name="curso" value="progObj" />
                         <label for="progWeb">Programador de Objetos</label>
                     </div>
-                    <div class="control-group">
-
+                    <div class="control-group" >
+                        <select id="asignaturas" name="asignaturas" multiple>
+                            
+                        </select>
                     </div>
                 </fieldset>
                 <fieldset>
@@ -63,27 +61,27 @@
                     </div>
                     <fieldset>
                         <legend>Fecha de nacimiento</legend>
-                        <input type="date" id="fechaNac" name="fechaNac" />
+                        <input type="date" id="fechaNac" name="fechaNac"/>
                     </fieldset>
                 </fieldset>
                 <fieldset>
                     <legend>Aficiones</legend>
                     <div class="check-group">
-                        <input type="checkbox" id="chkMusica" name="chkMusica" />
+                        <input type="checkbox" id="chkMusica" name="chkMusica"/>
                         <label for="chkMusica">Música</label>
-                        <input type="checkbox" id="chkViajar" name="chkViajar" />
+                        <input type="checkbox" id="chkViajar" name="chkViajar"/>
                         <label for="chkViajar">Viajar</label>
-                        <input type="checkbox" id="chkPintura" name="chkPintura" />
+                        <input type="checkbox" id="chkPintura" name="chkPintura"/>
                         <label for="chkPintura">Pintura</label>
-                        <input type="checkbox" id="chkFotografia" name="chkFotografia" />
+                        <input type="checkbox" id="chkFotografia" name="chkFotografia"/>
                         <label for="chkFotografia">Fotografía</label>
-                        <input type="checkbox" id="chkCine" name="chkCine" />
+                        <input type="checkbox" id="chkCine" name="chkCine"/>
                         <label for="chkCine">Cine</label>
-                        <input type="checkbox" id="chkLectura" name="chkLectura" />
+                        <input type="checkbox" id="chkLectura" name="chkLectura"/>
                         <label for="chkLectura">Lectura</label>
-                        <input type="checkbox" id="chkDeporte" name="chkDeporte" />
+                        <input type="checkbox" id="chkDeporte" name="chkDeporte"/>
                         <label for="chkDeporte">Deporte</label>
-                        <input type="checkbox" id="chkBaile" name="chkBaile" />
+                        <input type="checkbox" id="chkBaile" name="chkBaile"/>
                         <label for="chkBaile">Baile</label>
                     </div>
                 </fieldset>
@@ -102,9 +100,8 @@
                 </fieldset>
             </fieldset>
         </form>
-
+        
     </main>
 
 </body>
-
 </html>

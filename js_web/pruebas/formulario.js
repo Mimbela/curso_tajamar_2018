@@ -1,4 +1,4 @@
-﻿//import {CURSOS} from './cursos.js'
+﻿import { CURSOS } from './cursos.js'
 
 export class Formulario {
     constructor() {
@@ -16,6 +16,7 @@ export class Formulario {
 
         this.accederDom()
         this.definirManejadores()
+        this.presentarAsignaturas(this.domRadioCurso)
     }
 
     accederDom() {
@@ -39,12 +40,13 @@ export class Formulario {
         this.domDivInfo = document.querySelector('#info')
         this.domBtnEnviar = document.querySelector('#submit')
         this.domBtnRestablecer = document.querySelector('#btnReset')
+        this.domSelectAsignaturas = document.querySelector('#asignaturas')
     }
 
     definirManejadores() {
         this.domFormulario.addEventListener('submit', this.enviar.bind(this));
         this.domFormulario.addEventListener('reset', this.resetForm.bind(this));
-        this.domRepPasswd.addEventListener('change', this.checkPassword.bind(this));
+        this.domRepPasswd.addEventListener('change', this.checkPassword.bind());
     }
 
     enviar(ev) {
@@ -56,6 +58,7 @@ export class Formulario {
         this.datos = new Formulario()
     }
 
+
     recogerDatos() {
         this.datos.email = this.domEmail.value
         this.datos.passwd = this.domPasswd.value
@@ -64,6 +67,7 @@ export class Formulario {
         this.datos.segundoApellido = this.domSApellido.value
         this.datos.nacimiento = new Date(this.domFechaNac.value)
         this.datos.curso = this.procesarRadio(this.domRadioCurso)
+        this.datos.asignaturas = this.procesarSelect(this.domSelectAsignaturas)
     }
 
     checkPassword() {
@@ -82,13 +86,18 @@ export class Formulario {
         return value
     }
 
+    presentarAsignaturas(ev) {
+        let asignaturas = CURSOS[ev.target.checked].asignaturas
+        let HTMLResult = ''
+        asignaturas.forEach(elem => HTMLResult += `<option>${elem}</option>`)
+        this.domSelectAsignaturas.innerHTML = HTMLResult
+
+    }
     presentarDatos() {
         let resultadoHTML =
             `<div>
             <p>La persona ${this.datos.nombre} ${this.datos.primerApellido} con identificacion ${this.datos.email} ha nacido el ${this.datos.nacimiento}
         </div >`
-
-
 
         this.domDivInfo.innerHTML = resultadoHTML
     }

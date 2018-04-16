@@ -14,5 +14,5 @@ export const CURSOS = [
      {titulo: 'Bases de Datos', 
      asignaturas : [
          'Diselo BBDD', 'SQL Server', 'MongoDB'
-     ] },
+     ] }
 ]
