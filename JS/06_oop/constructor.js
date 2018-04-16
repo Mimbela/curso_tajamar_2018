@@ -1,19 +1,32 @@
-//
-
-function libro ()  {
-    this.autor= 'pepe',
-    this.titulo= '',
-    this.editorial='',
-    this.fecha= '',
-    this.generos=''
+function Libro (autor, titulo, editorial, fecha, generos) { //EL CONSTRUCTOR LLEVA EL NOMBRE EN MAYÚSCULAS
+    // var autor = 'Pepe'
+    this.autor = autor,
+    this.titulo = titulo,
+    this.editorial = editorial,
+    this.fecha = fecha,
+    this.generos = generos
 }
-/* 
-libro1 = new libro ()
-console.log (libro1)
+
+/* Libro()
+console.log(autor)
  */
+let libro1 = new Libro(
+    'J. R. R. Tolkien',
+    'El Señor de los Anillos',
+    'Minotauro',
+    new Date('1954'),
+    ['Fantasia'])
 
+console.log('libro1 ' , libro1 )
 
- let libro1 = new libro()
+let libro2 = new Libro(
+    'William Gibson', 'Neuromante', 
+    'Minotauro', new Date('1980'), ['SciFi'])
 
- libro()
- console.log (libro)
+// Siempre se puede modificar cualquier objeto
+libro2.propietario = 'Pepe'
+console.log('libro2' , libro2)
+
+console.log(typeof libro1)
+console.log(libro2.constructor.name)
+

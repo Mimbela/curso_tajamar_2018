@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./form1.css">
+    <script src="./form_app_1.js"></script>
+    <title>Formulario examen</title>
+</head>
+
+<body>
+    <header>
+        <h1>Formulario de examen</h1>
+    </header>
+    <main>
+        <form action="" method="get" id="form1">
+            <!--  method: get(url) y post (sistema no visible, action es la página donde se va a procesar la información-->
+
+            <!-- **********************************PARTE 1 ************************************************ -->
+            <fieldset>
+                <!-- conjunto de campos -->
+                <legend>DATOS PERSONALES</legend>
+                <!-- etiqueta de información de ese fieldset en la web -->
+
+                <div class="control-group">
+                    <!-- esto es una capa para dar formato y no se acoples unos sobre otros -->
+                    <!-- label: etiqueta que saldrá al principio de la caja con la info requerida 
+                for: importante, debe ir pegado al name o el id, tienen que llevar el mismo nombre -->
+                    <!--input: la caja para rellenar , necesitamos el atributo name y el atributo id
+               , type: hace referencia al tipo de datos que vamos a meter en el input 
+                 (text, password, email, date, number) -->
+                    <label for="nombre">Escribe tu nombre</label>
+                    <input type="text" name="nombre" id="nombre" maxlength="20" required minlength="2" autofocus>
+                    <!-- autofocus, hace que el cursos se active en esa parte del formulario -->
+                </div>
+
+                <div class="control-group">
+                    <label for="apellido">Escribe tu apellido</label>
+                    <input type="text" name="apellido" id="apellido" placeholder="Escribe tu apellido">
+                </div>
+                <div class="control-group" id="div_fecha">
+                    <label for="fecha">Fecha de nacimiento</label>
+                    <input type="date" name="fecha" id="fecha">
+                </div>
+
+                <div class="control-group">
+                    <label for="email">Escribe tu correo</label>
+                    <input type="email" name="email" id="email" placeholder="Escribe tu email">
+                </div>
+
+                <div class="control-group">
+                    <label for="passwd">Escribe tu contraseña</label>
+                    <input type="password" name="passwd" id="passwd" placeholder="Escribe tu contraseña">
+                </div>
+            </fieldset>
+            <!--********************************* PARTE 2- TEXTAREA********************************** -->
+            <fieldset>
+                <legend>Otros datos</legend>
+                <textarea name="datos" id="datos" cols="30" rows="10" placeholder="No hace falta que pongas nada"></textarea>
+                <!-- textarea es un recuadro grande para poner un comentario -->
+            </fieldset>
+            <!-- ************************************PARTE 3 - CHECKGROUP*********************************************** -->
+            <fieldset>
+                <legend>Conformidad</legend>
+                <div class="check-group">
+                    <input type="checkbox" name="isOk" id="isOk">
+                    <label for="">Estoy de acuerdo con las
+                        <a href="condiciones.html"></a>condiciones</label>
+                </div>
+
+                <div class="check-group">
+                    <input type="checkbox" name="isOk2" id="isOk2">
+                    <label for="">También estoy de acuerdo con ....</label>
+                </div>
+            </fieldset>
+
+            <!-- ************************************PARTE 4 - DATOS ACADÉMICOS************************************** -->
+
+            <fieldset id="acedemic" class="ocultar">
+                <legend>Datos académico</legend>
+
+                <legend>Qué turno quieres</legend>
+                <!-- radio : solo se elige uno , ponemos el mismo name
+            para que solo se pueda seleccionar 1-->
+                <div class="radio-group">
+                    <input type="radio" name="turno" id="mañana" value="mañana" checked>
+                    <!-- checked: se pone porque uno de ellos tiene que ir marcado -->
+                    <label for="mañana">Mañana</label>
+
+                    <input type="radio" name="turno" id="tarde" value="tarde">
+                    <label for="tarde">Tarde</label>
+
+                    <input type="radio" name="turno" id="noche" value="noche">
+                    <label for="noche">Noche</label>
+                </div>
+
+
+
+                <div class="control-group">
+                    <label for="curso">Selecciona un curso </label>
+                    <select name="curso" id="curso">
+                        <!-- SELECT : Engloban un conjunto de opciones que se cargan en un array , Una selección previa (
+radiobutton o  select) determina el conjunto concreto de datos que se cargan en un select determinado.
+se define el manejador del evento change del primer select
+•en la función correspondiente se cargan los datos de un arrayen el siguiente select
+-->
+                        <option value=""></option>
+                        <option value="Front">Desarrollo web</option>
+                        <option value="web">Diseño web</option>
+                        <option value="node">Servidores</option>
+                        <option value="sql">Base de datos</option>
+                    </select>
+                </div>
+
+                <div id="topics" class="control-group ocultar">
+                    <label for="curso">Selecciona un curso</label>
+                    <select name="topics" id="topics" multiple></select>
+                </div>
+            </fieldset>>
+
+            <!-- ******************************PARTE 5 : BUTTOMS **************************************-->
+            <!-- enviar: submit, saludar:buttom, borrar:reset -->
+
+            <fieldset>
+                <div class="control-group">
+                    <button type="button"> Saludar</button>
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Borrar</button>
+                    <!-- DUDA -->
+                    <input type="hidden" name="state" value="0">
+                </div>
+            </fieldset>
+
+        </form>
+
+        <div id="resultados" class="resultados">
+
+        </div>
+    </main>
+</body>
+
+</html>
