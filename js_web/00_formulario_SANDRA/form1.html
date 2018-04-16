@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./form1.css">
+    <script src="./form_app_1.js"></script>
+    <title>Formulario examen</title>
+</head>
+
+<body>
+    <header>
+        <h1>Datos del alumno</h1>
+    </header>
+    <main>
+            <!-- **********************************PARTE 1 ************************************************ -->
+            <fieldset>
+               
+                <legend>Identificación</legend>
+                <!-- etiqueta de información de ese fieldset en la web -->
+
+                
+                <div class="control-group">
+                    <label for="email">Cuenta de correo</label>
+                    <input type="email" name="email" id="email" placeholder="cuenta@dominio.com">
+                </div>
+                <div class="control-group">
+                    <label for="passwd">Introduzca su clave de acceso</label>
+                    <input type="password" name="passwd" id="passwd">
+                </div>
+
+                <div class="control-group">
+                    <label for="passwd">Repita la clave de acceso</label>
+                    <input type="password" name="passwd" id="passwd">
+                </div>
+            </fieldset>
+            <!-- *********************************************************************************** -->
+            <fieldset>
+                <legend>Datos perosnales</legend>
+
+                <div class="control-group">
+                        <label for="nombre">Escribe tu nombre</label>
+                        <input type="text" name="nombre" id="nombre" maxlength="20" required minlength="2" autofocus>
+    
+                    </div>
+                
+                <div class="control-group">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" name="apellido" id="apellido">
+                </div>
+                <div class="control-group">
+                    <label for="apellido2">Segundo apellido</label>
+                    <input type="text" name="apellido2" id="apellido2">
+
+                </div>
+
+                <div class="control-group" id="div_fecha">
+                    <label for="fecha">Fecha de nacimiento</label>
+                    <input type="date" name="fecha" id="fecha">
+                </div>
+                </legend>
+
+
+
+                <!-- ************************************PARTE 3 - CHECKGROUP*********************************************** -->
+                <fieldset>
+                    <legend>Aficiones</legend>
+                    <div class="check-group">
+                        <input type="checkbox" name="musica" id="musica">
+                        <label for="musica">Música</label>
+                    </div>
+
+                    <div class="check-group">
+                        <input type="checkbox" name="viajar" id="viajar">
+                        <label for="viajar">Viajar</label>
+                    </div>
+
+                    <div class="check-group">
+                        <input type="checkbox" name="pintura" id="pintura">
+                        <label for="pintura">Pintura</label>
+                    </div>
+
+                    <div class="check-group">
+                        <input type="checkbox" name="fotografia" id="fotografia">
+                        <label for="fotografia">Fotografía</label>
+                    </div>
+                    <div class="check-group">
+                        <input type="checkbox" name="cine" id="cine">
+                        <label for="cine">Cine</label>
+                    </div>
+                    <div class="check-group">
+                        <input type="checkbox" name="lectura" id="lectura">
+                        <label for="lectura">Lectura</label>
+                    </div>
+                    <div class="check-group">
+                        <input type="checkbox" name="deporte" id="deporte">
+                        <label for="deporte">Deporte</label>
+                    </div>
+                    <div class="check-group">
+                        <input type="checkbox" name="baile" id="baile">
+                        <label for="baile">Baile</label>
+                    </div>
+
+                 </fieldset>
+
+                <!-- ************************************PARTE 4 - DATOS ACADÉMICOS************************************** -->
+
+
+
+                    <div class="control-group">
+                        <label for="curso">Curso </label>
+                        <select name="curso" id="curso">
+                            <option value=""></option>
+                            <option value="Front">Programador web</option>
+                            <option value="sistemas">Programador de sistemas</option>
+                            <option value="poo">Programador de objetos</option>
+                            
+                        </select>
+                    </div>
+
+                    <div id="topics" class="control-group ocultar">
+                        <label for="curso">Selecciona un curso</label>
+                        <select name="topics" id="topics" multiple></select>
+                    </div>
+                </fieldset>>
+
+                <!-- ******************************PARTE 5 : BUTTOMS **************************************-->
+               
+
+                <fieldset>
+                    <div class="control-group">
+                       
+                        <button type="submit" id="btnEnviar">Enviar datos</button>
+                       
+                        <button type="reset" id="btnBorrar">Restablecer valores</button>
+                      
+                        <input type="hidden" name="state" value="0">
+                    </div>
+                </fieldset>
+
+        </form>
+
+        <div id="resultados" class="resultados">
+
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./form1.css">
+    <script src="./form_app_1.js" type="module"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <form action="" method="get" id="formExam">
+            <fieldset>
+                <legend>Datos del Alumno</legend>
+                <fieldset>
+                    <legend>Identificación</legend>
+                    <div class="control-group">
+                        <label for="email">Cuenta de Correo</label>
+                        <input type="email" id="email" name="email" required />
+                    </div>
+                    <div class="control-group">
+                        <label for="passwd">Introduzca su clave de acceso</label>
+                        <input type="password" id="passwd" name="passwd" />
+                    </div>
+                    <div class="control-group">
+                        <label for="repPasswd">Repita la clave de acceso</label>
+                        <input type="password" id="repPasswd" />
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Curso</legend>
+                    <div class="radio-group">
+                        <input type="radio" id="progWeb" name="curso" value="progWeb" checked />
+                        <label for="progWeb">Programador Web</label>
+                        <input type="radio" id="progSys" name="curso" value="progSys" />
+                        <label for="progWeb">Programador de Sistemas</label>
+                        <input type="radio" id="progObj" name="curso" value="progObj" />
+                        <label for="progWeb">Programador de Objetos</label>
+                    </div>
+                    <div class="control-group" >
+                        <select id="asignaturas" name="asignaturas" multiple>
+                            
+                        </select>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Datos personales</legend>
+                    <div class="control-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required />
+                    </div>
+                    <div class="control-group">
+                        <label for="papellido">Primer apellido</label>
+                        <input type="text" id="papellido" name="papellido" required />
+                    </div>
+                    <div class="control-group">
+                        <label for="sapellido">Segundo apellido</label>
+                        <input type="text" id="sapellido" name="sapellido" />
+                    </div>
+                    <fieldset>
+                        <legend>Fecha de nacimiento</legend>
+                        <input type="date" id="fechaNac" name="fechaNac"/>
+                    </fieldset>
+                </fieldset>
+                <fieldset>
+                    <legend>Aficiones</legend>
+                    <div class="check-group">
+                        <input type="checkbox" id="chkMusica" name="chkMusica"/>
+                        <label for="chkMusica">Música</label>
+                        <input type="checkbox" id="chkViajar" name="chkViajar"/>
+                        <label for="chkViajar">Viajar</label>
+                        <input type="checkbox" id="chkPintura" name="chkPintura"/>
+                        <label for="chkPintura">Pintura</label>
+                        <input type="checkbox" id="chkFotografia" name="chkFotografia"/>
+                        <label for="chkFotografia">Fotografía</label>
+                        <input type="checkbox" id="chkCine" name="chkCine"/>
+                        <label for="chkCine">Cine</label>
+                        <input type="checkbox" id="chkLectura" name="chkLectura"/>
+                        <label for="chkLectura">Lectura</label>
+                        <input type="checkbox" id="chkDeporte" name="chkDeporte"/>
+                        <label for="chkDeporte">Deporte</label>
+                        <input type="checkbox" id="chkBaile" name="chkBaile"/>
+                        <label for="chkBaile">Baile</label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div id="info">
+
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="btnEnviar">
+                        <button type="submit">Enviar</button>
+                    </div>
+                    <div class="btnReset">
+                        <button type="reset" id="btnReset">Reestablecer</button>
+                    </div>
+                </fieldset>
+            </fieldset>
+        </form>
+        
+    </main>
+
+</body>
+</html>

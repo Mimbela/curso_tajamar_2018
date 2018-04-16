@@ -35,6 +35,7 @@ export class Formulario {
         this.domCbxIsOk2 = document.querySelector('#isOk2')
         this.domSelectCurso = document.querySelector('#curso')
         this.domSelectTopics = document.querySelector('#topics')
+        //ojo
         this.domDivTopics = document.querySelector('#div_topics')
         this.domDivResultados = document.querySelector('#resultados')
         this.domFieldAcedemic = document.querySelector('#acedemic')
