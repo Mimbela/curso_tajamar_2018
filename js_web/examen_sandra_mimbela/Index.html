@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,11 +23,11 @@
                     </div>
                     <div class="control-group">
                         <label for="passwd">Introduzca su clave de acceso</label>
-                        <input type="password" id="passwd" name="passwd" />
+                        <input type="password" id="passwd" name="passwd" required />
                     </div>
                     <div class="control-group">
                         <label for="repPasswd">Repita la clave de acceso</label>
-                        <input type="password" id="repPasswd" />
+                        <input type="password" id="repPasswd" required />
                     </div>
                 </fieldset>
                 <fieldset>
@@ -39,9 +40,9 @@
                         <input type="radio" id="progObj" name="curso" value="progObj" />
                         <label for="progWeb">Programador de Objetos</label>
                     </div>
-                    <div class="control-group" >
-                        <select id="asignaturas" name="asignaturas" multiple>
-                            
+                    <div class="control-group">
+                        <select id="asignaturas" name="asignaturas">
+
                         </select>
                     </div>
                 </fieldset>
@@ -59,37 +60,30 @@
                         <label for="sapellido">Segundo apellido</label>
                         <input type="text" id="sapellido" name="sapellido" />
                     </div>
-                    <fieldset>
-                        <legend>Fecha de nacimiento</legend>
-                        <input type="date" id="fechaNac" name="fechaNac"/>
-                    </fieldset>
+
                 </fieldset>
                 <fieldset>
                     <legend>Aficiones</legend>
                     <div class="check-group">
-                        <input type="checkbox" id="chkMusica" name="chkMusica"/>
+                        <input type="checkbox" id="chkMusica" name="chkMusica" />
                         <label for="chkMusica">Música</label>
-                        <input type="checkbox" id="chkViajar" name="chkViajar"/>
+                        <input type="checkbox" id="chkViajar" name="chkViajar" />
                         <label for="chkViajar">Viajar</label>
-                        <input type="checkbox" id="chkPintura" name="chkPintura"/>
+                        <input type="checkbox" id="chkPintura" name="chkPintura" />
                         <label for="chkPintura">Pintura</label>
-                        <input type="checkbox" id="chkFotografia" name="chkFotografia"/>
+                        <input type="checkbox" id="chkFotografia" name="chkFotografia" />
                         <label for="chkFotografia">Fotografía</label>
-                        <input type="checkbox" id="chkCine" name="chkCine"/>
+                        <input type="checkbox" id="chkCine" name="chkCine" />
                         <label for="chkCine">Cine</label>
-                        <input type="checkbox" id="chkLectura" name="chkLectura"/>
+                        <input type="checkbox" id="chkLectura" name="chkLectura" />
                         <label for="chkLectura">Lectura</label>
-                        <input type="checkbox" id="chkDeporte" name="chkDeporte"/>
+                        <input type="checkbox" id="chkDeporte" name="chkDeporte" />
                         <label for="chkDeporte">Deporte</label>
-                        <input type="checkbox" id="chkBaile" name="chkBaile"/>
+                        <input type="checkbox" id="chkBaile" name="chkBaile" />
                         <label for="chkBaile">Baile</label>
                     </div>
                 </fieldset>
-                <fieldset>
-                    <div id="info">
 
-                    </div>
-                </fieldset>
                 <fieldset>
                     <div class="btnEnviar">
                         <button type="submit">Enviar</button>
@@ -98,10 +92,25 @@
                         <button type="reset" id="btnReset">Reestablecer</button>
                     </div>
                 </fieldset>
-            </fieldset>
+
+
+                <fieldset>
+                    <legend>Fecha</legend>
+                    <div id="div_fecha" class="control-group">
+                        <script>
+                            var f = new Date();
+                            document.write(f.getDate() + "/" + (f.getMonth() + 1) + "/" + f.getFullYear());
+                        </script>
+
+                </fieldset>
         </form>
-        
+
+        <div id="info">
+
+        </div>
+
     </main>
 
 </body>
+
 </html>

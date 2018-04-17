@@ -8,7 +8,7 @@ export class Formulario {
             nombre : '',
             primerApellido : '',
             segundoApellido : '',
-            nacimiento : '',
+            
             curso : '',
             asignaturas : [],
             aficiones : []
@@ -55,6 +55,7 @@ export class Formulario {
     enviar(ev) {
         this.recogerDatos()
         this.presentarDatos()
+        console.log (ev)
     }
 
     resetForm(ev) {
@@ -95,7 +96,7 @@ export class Formulario {
             }
         })
         return value
-    }/* 
+    }
     procesarSelect(node){
         let listAsignaturas = []
         for(let i = 0; i < node.length; i++){
@@ -105,16 +106,7 @@ export class Formulario {
             }
         }
         return listAsignaturas
-    } */
-//*************************************************************************** */
-    //cambio mio
-    procesarSelect(nodo) {
-        let listAsignaturas = nodo.selectedlistAsignaturas
-        return {
-            code: nodo.options[listAsignaturas].value, 
-            text: nodo.options[listAsignaturas].textContent
-        }    
-    }
+    } 
 
     presentarAsignaturas(ev) {
         let index
@@ -136,7 +128,7 @@ export class Formulario {
             <p>La persona ${this.datos.nombre} ${this.datos.primerApellido} con identificacion ${this.datos.email} ha nacido el ${this.datos.nacimiento}
         </div >`
 
-        this.domDivInfo.innerHTML = resultadoHTML
+         this.domDivInfo.innerHTML = resultadoHTML
     }
 
 }
