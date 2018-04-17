@@ -65,6 +65,7 @@ export class Formulario {
     recogerDatos() {
         this.datos.email = this.domEmail.value
         this.datos.passwd = this.domPasswd.value
+        //this.datos.repPasswd = this.domRepPasswd.value
         this.datos.nombre = this.domNombre.value
         this.datos.primerApellido = this.domPApellido.value
         this.datos.segundoApellido = this.domSApellido.value
@@ -79,7 +80,7 @@ export class Formulario {
         }
         else
         {
-            alert('password')
+            alert('La contraseña no coincide')
         }
         
         //return this.domPasswd.value === this.domRepPasswd ? this.domPasswd.value : ;
@@ -94,7 +95,7 @@ export class Formulario {
             }
         })
         return value
-    }
+    }/* 
     procesarSelect(node){
         let listAsignaturas = []
         for(let i = 0; i < node.length; i++){
@@ -104,7 +105,17 @@ export class Formulario {
             }
         }
         return listAsignaturas
+    } */
+//*************************************************************************** */
+    //cambio mio
+    procesarSelect(nodo) {
+        let listAsignaturas = nodo.selectedlistAsignaturas
+        return {
+            code: nodo.options[listAsignaturas].value, 
+            text: nodo.options[listAsignaturas].textContent
+        }    
     }
+
     presentarAsignaturas(ev) {
         let index
         for(let i = 0; i < ev.length; i++){

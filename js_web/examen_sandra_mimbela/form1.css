@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 body {
-    background-color: tomato;
+    background-color: #806763;
     margin: 3rem;
 }
 
@@ -10,6 +10,9 @@ main button{
     color: maroon
 }
 
+form{
+    background-color: rgb(90, 75, 54)
+}
 
 
 .control-group {
