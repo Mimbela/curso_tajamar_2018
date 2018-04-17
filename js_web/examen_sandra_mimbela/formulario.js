@@ -15,7 +15,7 @@ export class Formulario {
         }
 
         this.accederDom()
-        this.presentarAsignaturas(this.domRadioCurso)
+        this.selectAsignaturas(this.domRadioCurso)
         this.definirManejadores()
 
     }
@@ -45,28 +45,32 @@ export class Formulario {
     }
 
     definirManejadores() {
-        this.domFormulario.addEventListener('submit', this.enviar.bind(this));
-        this.domFormulario.addEventListener('reset', this.resetForm.bind(this));
-        this.domRepPasswd.addEventListener('blur', this.checkPassword.bind(this));
+        this.domFormulario.addEventListener('submit', this.enviar.bind(this),false)
+        this.domFormulario.addEventListener('reset', this.resetForm.bind(this))
+        this.domRepPasswd.addEventListener('blur', this.checkPassword.bind(this),false)
+        this.domRadioCurso.forEach(element => {
+            element.addEventListener('change',this.selectAsignaturas.bind(this),false)
+        });
     }
 
 
 
     enviar(ev) {
+        ev.preventDefault()
         this.recogerDatos()
         this.presentarDatos()
-        console.log (ev)
+        
     }
 
     resetForm(ev) {
         this.datos = new Formulario()
-    }
+        this.domDivInfo.removeChild(this.domDivInfo.firstChild)
+    } 
 
 
     recogerDatos() {
         this.datos.email = this.domEmail.value
-        this.datos.passwd = this.domPasswd.value
-        //this.datos.repPasswd = this.domRepPasswd.value
+        this.datos.passwd = this.checkPassword()
         this.datos.nombre = this.domNombre.value
         this.datos.primerApellido = this.domPApellido.value
         this.datos.segundoApellido = this.domSApellido.value
@@ -81,7 +85,8 @@ export class Formulario {
         }
         else
         {
-            alert('La contraseña no coincide')
+           alert('La contraseña no coincide')
+            this.domPasswd.focus()
         }
         
         //return this.domPasswd.value === this.domRepPasswd ? this.domPasswd.value : ;
@@ -109,6 +114,22 @@ export class Formulario {
     } 
 
     presentarAsignaturas(ev) {
+        
+        
+        let HTMLResult = ''
+        ev.forEach(elem => HTMLResult += `<option>${elem}</option>`)
+        this.domSelectAsignaturas.size=ev.length
+        this.domSelectAsignaturas.innerHTML = HTMLResult
+
+    }
+
+    selectAsignaturas(node){
+        let index = this.chkRadioCurso (this.domRadioCurso)
+        let asignaturas= CURSOS [index].asignaturas
+        this.presentarAsignaturas (asignaturas)
+    }
+
+    chkRadioCurso(ev){
         let index
         for(let i = 0; i < ev.length; i++){
             if(ev[i].checked){
@@ -116,16 +137,13 @@ export class Formulario {
                 break
             }
         }
-        let asignaturas = CURSOS[index].asignaturas
-        let HTMLResult = ''
-        asignaturas.forEach(elem => HTMLResult += `<option>${elem}</option>`)
-        this.domSelectAsignaturas.innerHTML = HTMLResult
-
+        return index
     }
+
     presentarDatos() {
         let resultadoHTML =
             `<div>
-            <p>La persona ${this.datos.nombre} ${this.datos.primerApellido} con identificacion ${this.datos.email} ha nacido el ${this.datos.nacimiento}
+            <p>La persona ${this.datos.nombre} ${this.datos.primerApellido} con identificacion ${this.datos.email} </p>
         </div >`
 
          this.domDivInfo.innerHTML = resultadoHTML
