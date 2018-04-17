@@ -3,20 +3,21 @@
 export class Formulario {
     constructor() {
         this.datos = {
-            email = '',
-            passwd = '',
-            nombre = '',
-            primerApellido = '',
-            segundoApellido = '',
-            nacimiento = '',
-            curso = '',
-            asignaturas =[],
-            aficiones =[]
+            email : '',
+            passwd : '',
+            nombre : '',
+            primerApellido : '',
+            segundoApellido : '',
+            nacimiento : '',
+            curso : '',
+            asignaturas : [],
+            aficiones : []
         }
 
         this.accederDom()
-        this.definirManejadores()
         this.presentarAsignaturas(this.domRadioCurso)
+        this.definirManejadores()
+
     }
 
     accederDom() {
@@ -28,7 +29,7 @@ export class Formulario {
         this.domPApellido = document.querySelector('#papellido')
         this.domSApellido = document.querySelector('#sapellido')
         this.domFechaNac = document.querySelector('#fechaNac')
-        this.domRadioCurso = document.querySelectorAll('#curso')
+        this.domRadioCurso = document.querySelectorAll('[name="curso"]')
         this.domChkMusica = document.querySelector('#chkMusica')
         this.domChkViajar = document.querySelector('#chkViajar')
         this.domChkPintura = document.querySelector('#chkPintura')
@@ -46,8 +47,10 @@ export class Formulario {
     definirManejadores() {
         this.domFormulario.addEventListener('submit', this.enviar.bind(this));
         this.domFormulario.addEventListener('reset', this.resetForm.bind(this));
-        this.domRepPasswd.addEventListener('change', this.checkPassword.bind());
+        this.domRepPasswd.addEventListener('blur', this.checkPassword.bind(this));
     }
+
+
 
     enviar(ev) {
         this.recogerDatos()
@@ -71,8 +74,15 @@ export class Formulario {
     }
 
     checkPassword() {
-
-        return this.domPasswd.value === this.domRepPasswd ? this.domPasswd.value : Error.prototype.message('Passwords no coinciden');
+        if(this.domPasswd.value === this.domRepPasswd.value){
+            console.warn('las contraseñas son iguales')
+        }
+        else
+        {
+            alert('password')
+        }
+        
+        //return this.domPasswd.value === this.domRepPasswd ? this.domPasswd.value : ;
 
     }
 
@@ -85,9 +95,25 @@ export class Formulario {
         })
         return value
     }
-
+    procesarSelect(node){
+        let listAsignaturas = []
+        for(let i = 0; i < node.length; i++){
+            if(node.options[i].selected){
+                let valor = node.options[i].value
+                listAsignaturas.push(valor)
+            }
+        }
+        return listAsignaturas
+    }
     presentarAsignaturas(ev) {
-        let asignaturas = CURSOS[ev.target.checked].asignaturas
+        let index
+        for(let i = 0; i < ev.length; i++){
+            if(ev[i].checked){
+                index = i
+                break
+            }
+        }
+        let asignaturas = CURSOS[index].asignaturas
         let HTMLResult = ''
         asignaturas.forEach(elem => HTMLResult += `<option>${elem}</option>`)
         this.domSelectAsignaturas.innerHTML = HTMLResult
