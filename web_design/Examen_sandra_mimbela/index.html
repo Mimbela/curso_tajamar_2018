@@ -1,44 +1,45 @@
 <!DOCTYPE html> 
-<!-- accesibilidad : doctype -->
+<!-- accesibilidad : doctype , la versión del HTML-->
 <html lang="es">
-
+<!-- accesibilidad: idioma español -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./style.css">
     <title>Editorial Satori </title>
+    <!-- accesibilidad: título -->
 </head>
 
 <body>
-    <!-- ****************comienza el contenedor********************** -->
+    
     <div class="contenedor">
 
-        <!-- header -->
+       
         <header class="header">
                 <a href="#nav_mobile" class="nav_icon">
-                    <img class="imagen_nav_icon" src="./img/menu1.png" alt="icono del menu">
+                    <img class="imagen_nav_icon" src="./img/menu1.png" alt="icono del menu"><!--accesibilidad: icono del menú  -->
                 </a>
-                <h1 class="header_h1">Editorial Satori</h1>
+                <h1 class="header_h1">Editorial Satori</h1> <!-- elemento de accesibilidad -->
             </header>
 
-        <!-- nav -->
+     
         <nav class="nav_escritorio">
                 <ul>
                     <li>
-                        <a href="http://satoriediciones.com/">Novedades</a>
-                        <a href="http://satoriediciones.com/catalogo/">Catálogo y tienda</a>
-                        <a href="http://satoriediciones.com/distribucion/">Distribución</a>
-                        <a href="http://satoriediciones.com/contacto/">Contacto</a>
+                        <a href="http://satoriediciones.com/" title="novedades">Novedades</a> <!-- accesibilidad: ponemos títulos a los enlaces -->
+                        <a href="http://satoriediciones.com/catalogo/" title="catálogo y tienda">Catálogo y tienda</a> <!-- accesibilidad: ponemos títulos a los enlaces -->
+                        <a href="http://satoriediciones.com/distribucion/" title="distribución">Distribución</a> <!-- accesibilidad: ponemos títulos a los enlaces -->
+                        <a href="http://satoriediciones.com/contacto/" title="contacto">Contacto</a> <!-- accesibilidad: ponemos títulos a los enlaces -->
                     </li>
                 </ul>
             </nav>
 
-        <!-- main -->
+        
         <main class="main">
             <div class="section_wrapper">
                 <section class="section">
-                    <h2>Nosotros</h2>
+                    <h2>Nosotros</h2> <!-- elemento de accesibilidad -->
                     <article>
                         <div class="imagen_wrapper">
                             <!-- accesibilidad, comentamos las fotos -->
@@ -60,15 +61,15 @@
                     </article>
 
                 </section>
-                <!-- fin de "nosotros" -->
+                
 
                 <section class="section">
-                    <h2>Libros disponibles</h2>
+                    <h2>Libros disponibles</h2> <!-- elemento de accesibilidad -->
 
                     <article class="libros">
                         <div class="immagen_wrapper">
                             <!-- accesibilidad, comentamos las fotos -->
-                            <img class="imagen" src="./img/satori3.jpg" alt="imagen de los principales libros que hemos reproducido en España">
+                            <img class="imagen" src="./img/satori3.jpg" alt="imagen de los libros más vendidos">
                         </div>
 
                         <strong>El tren nocturno de las vías</strong>
@@ -105,7 +106,7 @@
                     </article>
                 </section>
 
-                <!-- aside -->
+                
                 <div class="aside_wrapper">
                     <aside>
                         <h2>Últimas noticias</h2>
@@ -122,14 +123,14 @@
             
 
 
-<!-- NAV -->
+
 <nav id="nav_mobile" class="nav_mobile">
         <ul>
             <li>
-                <a href="http://satoriediciones.com/">Novedades</a>
-                <a href="http://satoriediciones.com/catalogo/">Catálogo y tienda</a>
-                <a href="http://satoriediciones.com/distribucion/">Distribución</a>
-                <a href="http://satoriediciones.com/contacto/">Contacto</a>
+                <a href="http://satoriediciones.com/" title="enlace a novedades">Novedades</a>  <!-- accesibilidad: ponemos títulos a los enlaces -->
+                <a href="http://satoriediciones.com/catalogo/" title="enlace a catálogo y tienda">Catálogo y tienda</a> <!-- accesibilidad: ponemos títulos a los enlaces -->
+                <a href="http://satoriediciones.com/distribucion/" title="enlace a distribución">Distribución</a> <!-- accesibilidad: ponemos títulos a los enlaces -->
+                <a href="http://satoriediciones.com/contacto/" title="enlace a contacto">Contacto</a> <!-- accesibilidad: ponemos títulos a los enlaces -->
                 
             </li>
         </ul>
